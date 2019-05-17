@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogflow ChatBot Assignment</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="../../target/ApiAi.js"></script>
+    <script src="demoFunctions.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        #placeholder {
+            text-align: center;
+            margin-top: 1.5em;
+        }
+
+        #main-wrapper {
+            display: none;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="background: #03a9f4">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo left">Master Appointment</a> 
+        </div>
+    </nav>
+    <div style="display: flex; flex-direction: column; align-items: center" class="container">
+        <div class="row">
+            <h5 style="font-weight: lighter; font-size: 18px">Note: Say "set an Appointment" to schedule Appointment</h5>
+        </div>
+        <div class="row">
+            <div class="col s2 input-field">
+                <a class="waves-effect waves-light btn" id="set_access_token">Start Chatbot</a>
+            </div>
+        </div>
+    </div>
+    <div id="placeholder">
+        
+        <h5>Please, click start to start Chatbot</h5>
+    </div>
+    <div id="main-wrapper">
+        <div class="container">
+            <div class="row">
+                <div style="background: rgb(250, 248, 248); margin-left: 20%; width: 70%; border: 1px solid darkgrey; border-radius: 20px" class="chat col s5">
+                    <div class="input-field">
+                        <input placeholder="Hi, Welcome to Master ChatBot, Type Here...'" id="q" type="text">
+                    </div>
+                    <div id="result">
+                        <!--div class="left-align flow-text">test</div>
+                    <div class="right-align flow-text">one more test</div-->
+                    </div>
+                </div>
+                <!-- <div class="col s2"></div> -->
+                <div style="display: none" class="col s5">
+                    <!--h5>Request payload:</h5>
+            <pre id="jsonRequest"></pre-->
+                    <!-- <h5>Response payload:</h5> -->
+                    <pre id="jsonResponse"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="layout.js"></script>
+
+</body>
+
+</html>
